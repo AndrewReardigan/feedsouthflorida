@@ -1,23 +1,28 @@
 import React, { useContext, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import { userStore } from '../contexts/UserContext';
-import Home from '../pages/Home';
-import Login from '../pages/Login';
-import Container from '@material-ui/core/Container';
+import { userStore } from '../contexts/usercontext';
+import Home from '../components/HomeScreen';
+import Login from '../components/Login';
+import HostEvent from '../components/HostEvent';
+import MakeDonation from '../components/MakeDonation';
 
 const Paths = () => {
 	const globalState = useContext(userStore);
 	const { dispatch } = globalState;
 
 	return (
-		<Container maxWidth={'100%'} disableGutters>
-			{!globalState.state.loggedIn ? <Redirect to="/" /> : <Redirect to="/home" />}
+		<div style={{ width: '100%', textAlign: 'center' }}>
+			{/* {!globalState.state.loggedIn ? <Redirect to="/" /> : <Redirect to="/home" />} */}
 			<Switch>
 				<Route path="/" exact component={Login} />
 				<Route path="/home" component={Home} />
+				<Route path="/host-event" component={HostEvent} />
+				<Route path="/make-donation" component={MakeDonation} />
+				<Route path="/event-details" component={HostEvent} />
+				<Route path="/host-details" component={HostEvent} />
 				<Route path="*" component={Login} />
 			</Switch>
-		</Container>
+		</div>
 	);
 };
 

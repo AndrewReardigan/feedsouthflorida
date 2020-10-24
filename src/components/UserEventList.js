@@ -18,12 +18,12 @@ function UserEvents(props) {
 
       return(
         <div>
-            <div id="logo"></div>
+            <div id="logo">ONE TIME EVENTS IN YOUR AREA</div>
             <div class="heading"></div>
             <div>
                 {nearbyEvents}
             </div>
-
+            <div class="heading">WEEKLY EVENTS</div>
             <div>
                 {weeklyEvents}
             </div>

@@ -2,9 +2,32 @@
   text-align: center;
 }
 
+
+/* styling for user events list */
 .header{
-  color: #547132;
+  color: #5D5D5D;
   font-size: 24px;
   font-weight: bold;
+
+}
+
+.eventPounds {
+  color: #F09826;
+  font-size: 21px;
+
+}
+
+.eventTitle {
+  color: #5D5D5D;
+  font-size: 28px;
+
+}
+
+/* images in case no field for images */
+.image1 {
+
+}
+
+.image2 {
 
 }

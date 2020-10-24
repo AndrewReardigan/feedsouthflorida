@@ -10,9 +10,9 @@ function UserEvents(props) {
         <div key={e.id} class='eventsList'>
             <Link to={`/user-events/${e.id}`}>
                 
-              <div class="eventPounds">{e.total_weight}</div>
-              <div class="image1">{e.image}</div>
-              <div class="eventTitle">{e.organizer}</div>
+              <div>{e.total_weight}</div>
+              <div>{e.image}</div>
+              <div>{e.organizer}</div>
               
             </Link>
         </div>
@@ -21,7 +21,7 @@ function UserEvents(props) {
       return(
         <div>
             <div id="logo"></div>
-            <div class="heading">EVENTS LISTING</div>
+            <div>EVENTS LISTING</div>
             <div>
                 {nearbyEvents}
             </div>        

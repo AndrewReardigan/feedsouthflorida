@@ -22,7 +22,7 @@ const Signup = () => {
 
 	// LOGIN ******
 	const handleLogin = () => {
-		clearErrors();
+		// clearErrors();
 
 		auth.signinWithEmailAndPassword(email, password).catch((err) => {
 			switch (err.code) {

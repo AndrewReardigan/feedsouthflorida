@@ -18,9 +18,9 @@ const reducer = (state, action) => {
 	}
 };
 
-const ListItemProvider = ({ children }) => {
+const UserProvider = ({ children }) => {
 	const [ state, itemDispatch ] = useReducer(reducer, initialState);
 	return <Provider value={{ state, itemDispatch }}>{children}</Provider>;
 };
 
-export { userStore, ListItemProvider };
+export { userStore, UserProvider };

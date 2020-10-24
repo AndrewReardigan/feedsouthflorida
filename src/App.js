@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+<<<<<<< HEAD
 import React from 'react'
 import Signup from './components/Signup'
 <<<<<<< HEAD
@@ -23,16 +24,20 @@ function App() {
     </div>
   );
 =======
+=======
+import React from 'react';
+import Signup from './components/Signup';
+import './App.css';
+>>>>>>> Added HostEvent,HomeScreen, CreateEvent and UserContext
 // import HomeScreen from './components/HomeScreen';
 import Login from './components/Login';
 
 function App() {
 	return (
 		<div className="App">
-			<HomeScreen />
+			<Login />
 		</div>
 	);
->>>>>>> Setup Routing
 }
 
 export default App;

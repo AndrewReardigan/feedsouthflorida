@@ -15,4 +15,5 @@ if (app.apps.length === 0) {
 	app.initializeApp(config);
 }
 const db = app.database();
+const auth = app.auth();
 export { db };

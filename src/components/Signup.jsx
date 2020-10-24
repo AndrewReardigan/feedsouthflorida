@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../apis/firebase';
+import Login from './Login';
+import Logout from './Logout';
+import { db, auth } from '../apis/firebase';
 
 const Signup = () => {
 	const [ user, setUser ] = useState('');
@@ -22,7 +24,7 @@ const Signup = () => {
 	const handleLogin = () => {
 		clearErrors();
 
-		db.auth().signinWithEmailAndPassword(email, password).catch((err) => {
+		auth.signinWithEmailAndPassword(email, password).catch((err) => {
 			switch (err.code) {
 				case 'auth/invalid-email':
 				case 'auth/user-disabled':
@@ -39,7 +41,7 @@ const Signup = () => {
 	// SIGN UP *****
 	const handleSignup = () => {
 		clearErrors();
-		db.auth().createUserWithEmailAndPassword(email, password).catch((err) => {
+		auth.createUserWithEmailAndPassword(email, password).catch((err) => {
 			switch (err.code) {
 				case 'auth/email-already-in-use':
 				case 'auth/invalid-email':
@@ -55,11 +57,11 @@ const Signup = () => {
 
 	//LOGOUT ********
 	const handleLogout = () => {
-		db.auth().signOut();
+		auth.signOut();
 	};
 	// CHECK AND SET IF USER EXISTS *******
 	const authListener = () => {
-		db.auth().onAuthStateChanged((user) => {
+		auth.onAuthStateChanged((user) => {
 			if (user) {
 				clearInputs();
 				setUser(user);
@@ -76,18 +78,22 @@ const Signup = () => {
 
 	return (
 		<div className="signup">
-			<Login
-				email={email}
-				setEmail={setEmail}
-				password={password}
-				setPassword={setPassword}
-				handleLogin={handleLogin}
-				handleSignup={handleSignup}
-				hasAccount={hasAccount}
-				setHasAccount={setHasAccount}
-				emailError={emailError}
-				passwordError={passwordError}
-			/>
+			{user ? (
+				<Logout handleLogout={handleLogout} />
+			) : (
+				<Login
+					email={email}
+					setEmail={setEmail}
+					password={password}
+					setPassword={setPassword}
+					handleLogin={handleLogin}
+					handleSignup={handleSignup}
+					hasAccount={hasAccount}
+					setHasAccount={setHasAccount}
+					emailError={emailError}
+					passwordError={passwordError}
+				/>
+			)}
 		</div>
 	);
 };

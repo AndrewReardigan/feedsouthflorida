@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+
 const config = {
 	apiKey: process.env.REACT_APP_API_KEY,
 	authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -14,4 +15,6 @@ if (app.apps.length === 0) {
 	app.initializeApp(config);
 }
 const db = app.database();
-export { db };
+const auth = app.auth()
+
+export { db, auth };

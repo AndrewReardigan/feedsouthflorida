@@ -13,8 +13,29 @@ button {
 	color: #fff;
 	font-size: 16px;
 	letter-spacing: 1px;
-	background: #f09826;
+	background: none;
 	cursor: pointer;
+}
+.welcome {
+	color: #547132;
+}
+.explore {
+	color: #f09826;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+h3 {
+	color: #5d5d5d;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	color: #5d5d5d;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 }
 
 .login {

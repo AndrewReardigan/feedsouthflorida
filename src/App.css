@@ -4,6 +4,10 @@
 
 
 /* styling for user events list */
+.eventsList {
+  display: block;
+}
+
 .header{
   color: #5D5D5D;
   font-size: 24px;
@@ -25,9 +29,14 @@
 
 /* images in case no field for images */
 .image1 {
-
+  
+  background-image: url("./images/8c98062bf9c3a234ad969368fe4966f9.png")
 }
 
 .image2 {
+  background-image: url("./images/eceec593784ea332066b39cbb2652fbe.png")
+}
 
+#donations {
+  background-image: url("./images/Group\ 3078.svg")
 }

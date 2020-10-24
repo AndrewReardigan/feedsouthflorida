@@ -2,6 +2,7 @@ import React from 'react';
 
 function UserEvents(props) {
 
+    // something to distinguish nearby vs. weekly events?
     const nearbyEvents = props.events.map(e => 
         <div key={e.id}>
             <Link to={`/user-events/${e.id}`}>
@@ -15,17 +16,17 @@ function UserEvents(props) {
     
         )
 
+    // something to distinguish nearby vs. weekly events?
     const weeklyEvents = props.events.map(e => 
-        props.events.map(e => 
-            <div key={e.id}>
-                <Link to={`/user-events/${e.id}`}>
-                    
-                  <div class="event-goal">{e.pounds_goal}</div> {/* or current pounds */}
-                  <div class="event-image">{e.image}</div>
-                  <div class="event-title">{e.event_name}</div>
-                  
-                </Link>
-            </div>
+        <div key={e.id}>
+            <Link to={`/user-events/${e.id}`}>
+                
+              <div class="event-goal">{e.pounds_goal}</div> {/* or current pounds */}
+              <div class="event-image">{e.image}</div>
+              <div class="event-title">{e.event_name}</div>
+              
+            </Link>
+        </div>
         
         )
 

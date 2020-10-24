@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 
 function UserEvents(props) {
 
@@ -7,9 +9,9 @@ function UserEvents(props) {
         <div key={e.id}>
             <Link to={`/user-events/${e.id}`}>
                 
-              <div class="event-goal">{e.pounds_goal}</div> {/* or current pounds */}
-              <div class="event-image">{e.image}</div>
-              <div class="event-title">{e.event_name}</div>
+              <div class="eventPounds">{e.pounds_goal}</div> {/* or current pounds */}
+              <div class="image1">{e.image}</div>
+              <div class="eventTitle">{e.event_name}</div>
               
             </Link>
         </div>
@@ -21,9 +23,9 @@ function UserEvents(props) {
         <div key={e.id}>
             <Link to={`/user-events/${e.id}`}>
                 
-              <div class="event-goal">{e.pounds_goal}</div> {/* or current pounds */}
-              <div class="event-image">{e.image}</div>
-              <div class="event-title">{e.event_name}</div>
+              <div class="eventGoal">{e.pounds_goal}</div> {/* or current pounds */}
+              <div class="image2">{e.image}</div>
+              <div class="eventTitle">{e.event_name}</div>
               
             </Link>
         </div>

@@ -1,5 +1,72 @@
 .App {
   text-align: center;
+  font-family: Montserrat;
+}
+
+/* events overview */
+.donateIcon {
+  background-image: url("./images/Group\ 3078.svg")
+}
+
+.darkGreyText {
+  color: #5D5D5D;
+
+}
+
+.donateText {
+  font-size: 17px;
+}
+
+.locationDisclaimer {
+  color: #547132;
+  font-size: 10pt;
+  font-family: Helvetica Neue;
+  font-style: italic;
+}
+
+.goalPounds {
+  color: #F09826;
+  font-size: 21px;
+}
+
+.goalCurrent {
+  color: #F09826;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 7px;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.eventDetailsName {
+  color: #547132;
+  font-style: 21px;
+  font-weight: bold;
+}
+
+.eventDescription {
+  font-size: 14px;
+}
+
+.eventDetailsBox {
+  font-size: 14px;
+  padding: 4px;
+  background-color: #F4F4F4;
+  border-radius: 2px;
+}
+
+.aboutOrganizer {
+  font-size: 14px;
+}
+
+.aboutOrganizerDesc {
+  font-size: 10px;
+}
+
+.aboutOrganizerEmail {
+  font-size: 11px;
+
 }
 
 
@@ -8,35 +75,25 @@
   display: block;
 }
 
-.header{
-  color: #5D5D5D;
+.eventNames{
   font-size: 24px;
+  font-weight: bold
+
+}
+
+.eventCategories {
+  font-size: 28px;
   font-weight: bold;
 
 }
 
-.eventPounds {
-  color: #F09826;
-  font-size: 21px;
-
-}
-
-.eventTitle {
-  color: #5D5D5D;
-  font-size: 28px;
-
-}
-
 /* images in case no field for images */
-.image1 {
+.image-oranges-123 {
   
   background-image: url("./images/8c98062bf9c3a234ad969368fe4966f9.png")
 }
 
-.image2 {
+.image-kids-123 {
   background-image: url("./images/eceec593784ea332066b39cbb2652fbe.png")
 }
 
-#donations {
-  background-image: url("./images/Group\ 3078.svg")
-}

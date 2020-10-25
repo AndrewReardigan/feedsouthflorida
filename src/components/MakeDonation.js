@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { userStore } from '../contexts/usercontext';
 
 const MakeDonation = () => {
+	const globalState = useContext(userStore);
+
+	useEffect(() => {
+		console.log(globalState.state);
+	}, []);
+
 	return (
 		<div>
 			<div className="donate-header">
@@ -25,6 +32,13 @@ const MakeDonation = () => {
 				<input className="host-input" type="text" placeholder="Expiration Date" />
 				<input className="host-input" type="text" placeholder="Notes" />
 			</div>
+			<ul>
+				{globalState.state.items !== undefined ? (
+					globalState.state.items.map((item) => {
+						<li>{item.name}</li>;
+					})
+				) : null}
+			</ul>
 		</div>
 	);
 };

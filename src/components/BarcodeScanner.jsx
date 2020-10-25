@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Dynamsoft from './Dynamsoft';
 import axios from 'axios';
 import '../App.css';
 import './barcodescanner.css';
+import { userStore } from '../contexts/usercontext';
 
 const BarcodeScanner = () => {
+	const globalState = useContext(userStore);
+	const { itemDispatch } = globalState;
 	const [ count, setCount ] = useState(0);
 	const [ weight, setWeight ] = useState('');
 	const [ name, setName ] = useState('');
@@ -14,8 +17,15 @@ const BarcodeScanner = () => {
 	const [ scanReceived, setScanReceived ] = useState(false);
 	const [ scanData, setScanData ] = useState('');
 
+	const addItem = () => {
+		if (name !== '' && weight !== '') {
+			itemDispatch({ type: 'addItem', value: { name, weight } });
+		}
+	};
+
 	const getUpcData = async (upc) => {
 		console.log('getting upc data for :' + upc);
+
 		// const callOptions = {
 		// 	method: 'GET',
 		// 	mode: 'no-cors',
@@ -146,7 +156,7 @@ const BarcodeScanner = () => {
 				<div
 					className="bottom-component"
 					style={{
-						width: '800px',
+						width: '80%',
 						marginLeft: 'auto',
 						marginRight: 'auto',
 						height: '200px',
@@ -168,7 +178,14 @@ const BarcodeScanner = () => {
 							-
 						</button>
 					</div>
-					<button className="special-button">ADD</button>
+					<button
+						className="special-button"
+						onClick={() => {
+							addItem();
+						}}
+					>
+						ADD
+					</button>
 				</div>
 			</div>
 		</div>

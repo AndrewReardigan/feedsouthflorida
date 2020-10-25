@@ -12,7 +12,11 @@ const reducer = (state, action) => {
 			newState = { ...state, user: action.value }; // do something with the action
 			console.log('NEW STATE:', newState);
 			return newState;
-
+		case 'addItem': //Set initial items context after first item scanned.
+			console.log(`action value:${JSON.stringify(action.value)}`);
+			newState = { ...state, items: action.value }; // do something with the action
+			console.log('NEW STATE:', newState);
+			return newState;
 		default:
 			throw new Error();
 	}

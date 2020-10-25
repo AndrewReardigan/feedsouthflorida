@@ -8,11 +8,8 @@ class Donations extends Component {
        
         return (
             <div>
-                {/* cont to hold barcode, picture and text input */}
+                {/* cont to hold barcode, picture and text input, or directly import and add as divs inline-block */}
                 {/* comp for forms */}
-                {/* comp for working donations list/additions */}
-                
-  
             </div>
   
     );

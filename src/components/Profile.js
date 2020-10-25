@@ -40,7 +40,7 @@ const Profile = () => {
 						marginTop: '10px'
 					}}
 				>
-					<h1 className="explore">TESTING</h1>
+					<h1 className="explore">523LBS</h1>
 				</div>
 			</div>
 			<div style={{ flex: '1 100%', marginTop: '40px' }}>

@@ -6,6 +6,7 @@ import logo from '../assets/home/logo.png';
 import veggies from '../assets/home/veggies.png';
 import profilePic from '../assets/home/seth.png';
 import { userStore } from '../contexts/usercontext';
+import eventphoto from '../assets/home/8c98062bf9c3a234ad969368fe4966f9-1@2x.png';
 
 const HomeScreen = () => {
 	const globalState = useContext(userStore);
@@ -52,9 +53,11 @@ const HomeScreen = () => {
 					<hr style={{ width: '75%', marginLeft: 'auto', marginRight: 'auto' }} />
 				</div>
 				<div style={{ flex: '1 100%' }}>
-					<h1 className="explore">Explore</h1>
+					<h1 style={{ paddingBottom: '0px', paddingTop: '0px', marginBottom: '0px' }} className="explore">
+						Explore
+					</h1>
 					<img src={veggies} />
-					<h1 style={{ textTransform: 'uppercase', textAlign: 'center' }}>
+					<h1 style={{ textTransform: 'uppercase', textAlign: 'center', paddingBottom: '20px' }}>
 						one time events in<br />your area
 					</h1>
 				</div>
@@ -62,11 +65,83 @@ const HomeScreen = () => {
 				<div style={{ flex: '1 100%' }}>
 					<hr style={{ width: '75%', marginLeft: 'auto', marginRight: 'auto' }} />
 				</div>
-				<div style={{ flex: '1 100%' }}>Events in your Area</div>
 				<div style={{ flex: '1 100%' }}>
-					<div style={{ border: '1px solid black', width: '100px' }}>
-						<Link to="/event-details">EVENT</Link>
+					<div
+						style={{
+							width: '75%',
+							flexFlow: 'row wrap',
+							display: 'flex',
+							marginLeft: 'auto',
+							marginRight: 'auto',
+							paddingBottom: '20px',
+							paddingTop: '20px'
+						}}
+					>
+						<div style={{ flex: '1 50%' }}>
+							<Link style={{ textDecoration: 'none' }} to="/event-details">
+								<h3 style={{ color: '#F09826' }}>120LBS</h3>
+								<img
+									style={{ width: '120px', marginLeft: '5px', marginRight: '5px' }}
+									src={eventphoto}
+								/>
+								<h3>EVENT ONE</h3>
+							</Link>
+						</div>
+						<div style={{ flex: '1 50%' }}>
+							<Link style={{ textDecoration: 'none' }} to="/event-details">
+								<h3 style={{ color: '#F09826' }}>300LBS</h3>
+								<img
+									style={{ width: '120px', marginLeft: '5px', marginRight: '5px' }}
+									src={eventphoto}
+								/>
+								<h3 style={{ textDecoration: 'none' }}>EVENT TWO</h3>
+							</Link>
+						</div>
 					</div>
+				</div>
+				<div style={{ flex: '1 100%' }}>
+					<hr style={{ width: '75%', marginLeft: 'auto', marginRight: 'auto' }} />
+				</div>
+				<div style={{ flex: '1 100%' }}>
+					<h1 style={{ textAlign: 'center', paddingBottom: '10px', paddingTop: '10px' }}>WEEKLY EVENTS</h1>
+
+					<div
+						style={{
+							width: '75%',
+							flexFlow: 'row wrap',
+							display: 'flex',
+							marginLeft: 'auto',
+							marginRight: 'auto',
+							marginTop: '10px',
+							textAlign: 'center',
+							alignItems: 'center',
+							alignContent: 'center'
+						}}
+					>
+						<div style={{ flex: '1 50%' }}>
+							<Link style={{ textDecoration: 'none' }} to="/event-details">
+								<h3 style={{ color: '#F09826' }}>120LBS</h3>
+								<img
+									style={{ width: '120px', marginLeft: '5px', marginRight: '5px' }}
+									src={eventphoto}
+								/>
+								<h3>EVENT ONE</h3>
+							</Link>
+						</div>
+						<div style={{ flex: '1 50%' }}>
+							<Link style={{ textDecoration: 'none' }} to="/event-details">
+								<h3 style={{ color: '#F09826' }}>300LBS</h3>
+								<img
+									style={{ width: '120px', marginLeft: '5px', marginRight: '5px' }}
+									src={eventphoto}
+								/>
+								<h3 style={{ textDecoration: 'none' }}>EVENT TWO</h3>
+							</Link>
+						</div>
+					</div>
+				</div>
+				<div style={{ flex: '1 100%' }}>
+					<div style={{ border: '1px solid black', width: '100px' }} />
 				</div>
 				<div style={{ flex: '1 100%' }}>Hosts</div>
 			</div>

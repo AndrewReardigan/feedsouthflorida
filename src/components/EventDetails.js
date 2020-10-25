@@ -2,6 +2,8 @@ import React from 'react';
 import logo from '../assets/home/logo.png';
 import seth from '../assets/home/seth.jpg';
 import donate from '../assets/home/donate.svg';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 const EventDetails = () => {
 	return (
 		<div>
@@ -94,11 +96,13 @@ const EventDetails = () => {
 						<p style={{ marginRight: '55px', fontWeight: 200, fontSize: '10pt' }}>seth@seth.com</p>
 					</div>
 					<div style={{ flex: '1 100%', marginTop: '40px' }}>
-						<img
-							style={{ marginLeft: 'auto', marginRight: 'auto', height: '75px', width: '75px' }}
-							src={donate}
-						/>
-						<h3>DONATE</h3>
+						<Link style={{ textDecoration: 'none' }} to="/make-donation">
+							<img
+								style={{ marginLeft: 'auto', marginRight: 'auto', height: '75px', width: '75px' }}
+								src={donate}
+							/>
+							<h3>DONATE</h3>
+						</Link>
 					</div>
 				</div>
 			</div>

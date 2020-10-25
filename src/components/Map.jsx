@@ -4,11 +4,11 @@ import ReactMapGL, { Marker } from 'react-map-gl';
 
 const Map = () => {
 	const [ viewport, setViewport ] = useState({
-		latitude: 39.8283,
-		longitude: -98.5795,
+		latitude: 26.7056,
+		longitude: -80.0364,
 		width: '100vw',
 		height: '100vh',
-		zoom: 4
+		zoom: 10
 	});
 
 	return (
@@ -20,10 +20,8 @@ const Map = () => {
 					setViewport(viewport);
 				}}
 			>
-				<Marker key={1} latitude={35.611763} longitude={-83.489548} />
-
 				<div>
-					<h1>Drop Off</h1>
+					<h1>Drop Off Locations:</h1>
 				</div>
 			</ReactMapGL>
 		</div>

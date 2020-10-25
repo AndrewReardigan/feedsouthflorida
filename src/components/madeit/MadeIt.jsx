@@ -7,7 +7,7 @@ const MadeIt = () => {
 			<h1>YOU MADE IT!</h1>
 			<div className="total-weight">
 				<h3>YOUR TOTAL WEIGHT IS</h3>
-				<input placeholder="532 lbs" value="something" />
+				<input placeholder="532 lbs" value="532 lbs" />
 			</div>
 
 			<button className="map">GENERATE MAP</button>

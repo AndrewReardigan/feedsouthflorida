@@ -13,7 +13,7 @@ import MadeIt from './components/madeit/MadeIt';
 function App() {
   return (
     <div className="App">
-      <Map />
+      <MadeIt />
 
     </div>
   );

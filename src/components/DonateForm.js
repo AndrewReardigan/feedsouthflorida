@@ -147,9 +147,21 @@ class DonateForm extends Component {
                   <div>
                     <button onClick={this.handleList}>Save to List</button>
                   </div>
+                  
+                  <hr/>
+                  <div>
+                      {this.state.list.map(l => 
+                        <div key={l.id}>
+                            <p>{l.item}  {l.weight}</p>
+                            <p>{l.date}</p> 
+                        </div>
+                        )
+                      }
+                  </div>
+                  <hr/> 
+
           
                   <div>
-                      {/* maybe better, a route with state.list passed as props */}
                     <button type="submit">Complete Donation</button>
                   </div>
             </form>

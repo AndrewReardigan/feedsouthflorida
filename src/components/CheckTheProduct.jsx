@@ -15,7 +15,6 @@ const CheckTheProduct = (props) => {
 	useEffect(
 		() => {
 			// getUpcData('051000164612');
-
 			if (barCode !== null) {
 				getUpcData(barCode);
 				console.log(upcData);
@@ -25,6 +24,7 @@ const CheckTheProduct = (props) => {
 	);
 	return (
 		<div>
+			<div className="donate-scan" />
 			<h1> {upcData !== null ? upcData.items[0].title : null}</h1>
 			<h3>{upcData !== null ? upcData.items[0].weight : null}</h3>
 		</div>

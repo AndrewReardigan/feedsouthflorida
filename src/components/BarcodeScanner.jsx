@@ -108,6 +108,12 @@ const BarcodeScanner = () => {
 		[ scanReceived ]
 	);
 
+	useEffect(() => {
+		return () => {
+			scanner.destroy();
+		};
+	}, []);
+
 	return (
 		<div className="container">
 			<div className="scan-header" style={{ position: 'absolute', top: '0px', zIndex: 9999 }}>

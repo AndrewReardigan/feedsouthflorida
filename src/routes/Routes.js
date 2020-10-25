@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { UserProvider } from '../contexts/usercontext';
-import Paths from '../routes/Paths';
+import Paths from './Paths';
 
 function Routes() {
 	return (

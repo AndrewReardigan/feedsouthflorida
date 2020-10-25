@@ -51,6 +51,7 @@
 		"firebase": "^7.24.0",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
+		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.0",
 		"react-webcam-barcode-scanner": "^0.0.2-rc2",
 		"web-vitals": "^0.2.4"
@@ -63,10 +64,21 @@
 		"deploy": "yarn build && firebase deploy --only hosting"
 	},
 	"eslintConfig": {
-		"extends": [ "react-app", "react-app/jest" ]
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
 	},
 	"browserslist": {
-		"production": [ ">0.2%", "not dead", "not op_mini all" ],
-		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }

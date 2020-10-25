@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import logo from '../assets/home/logo.png';
+import logo from '../assets/profiles/logo.png';
 import profilePic from '../assets/home/seth.png';
 import { userStore } from '../contexts/usercontext';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { ReactComponent as Event } from '../assets/home/Event.svg';
 import { ReactComponent as Donate } from '../assets/home/donate.svg';
 import logo from '../assets/home/logo.png';
+import veggies from '../assets/home/veggies.png';
 import profilePic from '../assets/home/seth.png';
 import { userStore } from '../contexts/usercontext';
 
@@ -52,6 +53,7 @@ const HomeScreen = () => {
 				</div>
 				<div style={{ flex: '1 100%' }}>
 					<h1 className="explore">Explore</h1>
+					<img src={veggies} />
 					<h1 style={{ textTransform: 'uppercase', textAlign: 'center' }}>
 						one time events in<br />your area
 					</h1>
@@ -61,6 +63,11 @@ const HomeScreen = () => {
 					<hr style={{ width: '75%', marginLeft: 'auto', marginRight: 'auto' }} />
 				</div>
 				<div style={{ flex: '1 100%' }}>Events in your Area</div>
+				<div style={{ flex: '1 100%' }}>
+					<div style={{ border: '1px solid black', width: '100px' }}>
+						<Link to="/event-details">EVENT</Link>
+					</div>
+				</div>
 				<div style={{ flex: '1 100%' }}>Hosts</div>
 			</div>
 		</div>

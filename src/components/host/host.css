@@ -1,10 +1,11 @@
 .host-header {
-	background-color: green;
+	background-color: #547132;
 	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 	padding-bottom: 10px;
+	color: white;
 }
 
 p {
@@ -17,4 +18,41 @@ p {
 	flex-direction: column;
 	padding: 10px;
 	margin: 10px;
+}
+
+.host-label {
+	text-align: left;
+	margin-bottom: 5px;
+	font-size: 14pt;
+	font-weight: 600;
+	color: #5d5d5d;
+}
+
+.host-input {
+	border: 1px solid #5d5d5d;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 40px;
+	padding-left: 20px;
+}
+
+input::placeholder {
+	font-weight: 300;
+	font-size: 14pt;
+	color: #5d5d5d;
+}
+
+.event-submit {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	background-color: #f09826;
 }

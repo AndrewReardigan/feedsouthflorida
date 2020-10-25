@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import BarcodeScannerComponent from 'react-webcam-barcode-scanner';
-// import BarcodeReader from 'react-barcode-reader';
-// import CheckTheProduct from './CheckTheProduct';
 import Dynamsoft from './Dynamsoft';
 import axios from 'axios';
 import '../App.css';
@@ -18,6 +15,7 @@ const BarcodeScanner = () => {
 	const [ scanData, setScanData ] = useState('');
 
 	const getUpcData = async (upc) => {
+		console.log('getting upc data for :' + upc);
 		// const callOptions = {
 		// 	method: 'GET',
 		// 	mode: 'no-cors',
@@ -32,10 +30,19 @@ const BarcodeScanner = () => {
 			url: 'https://us-central1-feedingsouthflorida.cloudfunctions.net/getupc',
 			headers: {
 				'Content-Type': 'application/json'
+			},
+			data: {
+				upc: upc.toString()
 			}
 		});
-		alert(apiCall);
-		alert(JSON.stringify(apiCall));
+		if (apiCall.data) {
+			setName(apiCall.data.items[0].title);
+			setWeight(apiCall.data.items[0].weight);
+		} else {
+			alert('Item not found. Try again or submit item manually.');
+		}
+		// alert(JSON.stringify(apiCall.data));
+		// alert(JSON.stringify(apiCall));
 		// setName(apiCall.data.items[0].title);
 		// setWeight(apiCall.data.items[0].weight);
 	};
@@ -66,13 +73,13 @@ const BarcodeScanner = () => {
 		await scanner.open();
 		scanner.onFrameRead = (results) => {
 			if (results.length) {
-				setScanData(results[0].barcodeText);
+				getUpcData(results[0].barcodeText);
 				setScanReceived(true);
 			}
 		};
 
 		scanner.onUnduplicatedRead = (txt, result) => {
-			console.log('NOTHING');
+			getUpcData(txt);
 		};
 	};
 
@@ -86,7 +93,6 @@ const BarcodeScanner = () => {
 	useEffect(
 		() => {
 			if (scanReceived) {
-				getUpcData(scanData);
 			}
 		},
 		[ scanReceived ]
@@ -154,7 +160,7 @@ const BarcodeScanner = () => {
 					<input className="input" value={weight} placeholder="Weight" />
 					<div className="increment">
 						<h3>Quantity</h3>
-						<button className="special-button" onClick={() => getUpcData('1234')}>
+						<button className="special-button" onClick={() => getUpcData('016000275348')}>
 							+
 						</button>
 						<h3>{count}</h3>

@@ -7,24 +7,24 @@ const EventDetails = () => {
 		<div>
 			<div style={{ width: '100%', height: '100%' }}>
 				<div style={{ display: 'flex', flexFlow: 'row wrap' }}>
-					<div style={{ flex: '1 50%' }}>
-						<img src={logo} style={{ height: '50px', marginTop: '40px' }} />
+					<div style={{ flex: '1 40%' }}>
+						<img src={logo} style={{ height: '40px', marginTop: '40px' }} />
 						<br />
-						<img src={seth} style={{ height: '175px' }} />
+						<img src={seth} style={{ height: '150px' }} />
 					</div>
-					<div style={{ flex: '1 50%' }}>
-						<h3 style={{ marginTop: '70px' }}>CURRENT WEIGHT</h3>
+					<div style={{ flex: '1 60%' }}>
+						<h3 style={{ marginTop: '70px', paddingRight: '5px', fontSize: '10pt' }}>CURRENT WEIGHT</h3>
 						<div
 							style={{
 								border: '1px solid black',
-								width: '80%',
+								width: '100%',
 								marginRight: 'auto',
 								marginLeft: 'auto',
 								borderRadius: '5px',
 								marginTop: '10px'
 							}}
 						>
-							<h1 style={{ fontSize: '30pt' }} className="explore">
+							<h1 style={{ fontSize: '18pt' }} className="explore">
 								999lbs
 							</h1>
 						</div>
@@ -61,8 +61,8 @@ const EventDetails = () => {
 							style={{
 								width: '80%',
 								textAlign: 'left',
-								marginLeft: '50px',
-								marginRight: '50px',
+								marginRight: 'auto',
+								marginLeft: 'auto',
 								marginTop: '20px',
 								backgroundColor: '#F4F4F4',
 								borderRadius: '5px',

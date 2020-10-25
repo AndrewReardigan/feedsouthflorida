@@ -5,21 +5,6 @@
 	font-family: "Nunito", sans-serif;
 }
 
-/* button {
-	border: none;
-	outline: none;
-	width: 100%;
-	padding: 15px 0;
-	color: #fff;
-	font-size: 16px;
-	letter-spacing: 1px;
-	background: none;
-	cursor: pointer;
-<<<<<<< HEAD
-} */
-/* 
-=======
-}
 .welcome {
 	color: #547132;
 	font-size: '1.5em';
@@ -43,13 +28,12 @@ h1 {
 	font-weight: 700;
 }
 
->>>>>>> Styling and icons for home page
 .login {
 	width: 100%;
 	min-height: 100vh;
 	padding: 0 20px;
-	background: #547132;
 	display: flex;
+	align-items: center;
 }
 
 .login .loginContainer {
@@ -146,7 +130,7 @@ h1 {
 	width: 86px;
 	padding: 8px 0;
 	background: #3a2b58;
-} */
+}
 
 .scan-header {
 	width: 100%;
@@ -159,12 +143,10 @@ h1 {
 	font-weight: bold;
 	color: white;
 }
-
 .scanner {
 	padding: 0;
 	margin: 0;
 }
-
 .bottomComponent {
 	display: flex;
 	flex-direction: column;
@@ -172,56 +154,16 @@ h1 {
 }
 .input {
 	width: 80%;
-
 	padding: 10px;
 	margin: 10px;
 }
-
 .increment {
 	display: flex;
 	padding: 0px 10px;
 	justify-content: center;
 }
-
 button {
-	padding: 1rem 4rem;
 	border-radius: 25px;
-	background-color: orange;
-}
-
-.scan-header {
-	width: 100%;
-	height: 150px;
-	background-color: orange;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2.2rem;
-	font-weight: bold;
-	color: white;
-}
-.scanner {
-	padding: 0;
-	margin: 0;
-}
-.bottomComponent {
-	display: flex;
-	flex-direction: column;
-	justify-items: center;
-}
-.input {
-	width: 80%;
-	padding: 10px;
-	margin: 10px;
-}
-.increment {
-	display: flex;
-	padding: 0px 10px;
-	justify-content: center;
-}
-.special-button {
-	padding: 1rem 4rem;
-	border-radius: 25px;
-	background-color: orange;
-	font-size: medium;
+	background-color: transparent;
+	border: none;
 }

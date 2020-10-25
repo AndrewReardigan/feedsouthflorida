@@ -3,13 +3,15 @@ import React from 'react'
 import Signup from './components/Signup'
 import Host from './components/host/Host'
 
+
 import BarcodeScanner from './components/BarcodeScanner';
 import CheckTheProduct from './components/CheckTheProduct'
+import MadeIt from './components/madeit/MadeIt';
 
 function App() {
   return (
     <div className="App">
-      <Signup />
+      <MadeIt />
 
     </div>
   );

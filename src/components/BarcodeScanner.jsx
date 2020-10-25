@@ -9,8 +9,6 @@ const BarcodeScanner = () => {
 
 	const [ found, setFound ] = useState(false);
 
-	const itemData = () => {};
-
 	const incrementer = () => {
 		setCount(count + 1);
 	};
@@ -76,7 +74,13 @@ const BarcodeScanner = () => {
 							-
 						</button>
 					</div>
-					<button>ADD</button>
+					<button
+						onClick={(e) => {
+							console.log(e.target.value);
+						}}
+					>
+						ADD
+					</button>
 				</div>
 			</div>
 		</div>

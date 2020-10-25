@@ -1,19 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const CheckTheProduct = () => {
-	const data = axios
-		.get(
-			'https://api.edamam.com/api/food-database/v2/parser?upc=190298000254&app_id=58aee40e&app_key=c669624a047dd44b349464cab662c714'
-		)
-		.then((response) => {
-			console.log(response.data);
-		});
-
+const CheckTheProduct = (props) => {
+	const [ upcData, setUpcData ] = useState(null);
+	const { barCode } = props;
+	const getUpcData = async (upc) => {
+		const callOptions = { headers: { 'Access-Control-Allow-Origin': 'https://www.upcitemdb.com' } };
+		const apiCall = await axios.get(`https://api.upcitemdb.com/prod/trial/lookup?upc=${upc}`, callOptions);
+		setUpcData(apiCall.data);
+	};
+	// const apiCall = axios.get('https://api.upcitemdb.com/prod/trial/lookup?upc=051000164612').then((response) => {
+	// 	console.log(response.data);
+	// });
+	useEffect(
+		() => {
+			// getUpcData('051000164612');
+			if (barCode !== null) {
+				getUpcData(barCode);
+				console.log(upcData);
+			}
+		},
+		[ barCode ]
+	);
 	return (
 		<div>
-			<h1>{console.log(data)}</h1>
-			{}
+			<div className="donate-scan" />
+			<h1> {upcData !== null ? upcData.items[0].title : null}</h1>
+			<h3>{upcData !== null ? upcData.items[0].weight : null}</h3>
 		</div>
 	);
 };

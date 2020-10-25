@@ -1,0 +1,39 @@
+.login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.button-div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+}
+button {
+	margin: 1rem;
+	display: flex;
+	justify-content: center;
+}
+.signin-button {
+	width: 200px;
+	margin-left: 100px;
+}
+.apple-button {
+	width: 400px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
+
+.facebook-button {
+	width: 400px;
+	background-color: darkblue;
+	color: white;
+	font-weight: bold;
+}
+
+input {
+	padding: 1rem;
+	margin: 1rem;
+}

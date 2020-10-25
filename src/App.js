@@ -9,7 +9,7 @@ import CheckTheProduct from './components/CheckTheProduct'
 function App() {
   return (
     <div className="App">
-      <Host />
+      <Signup />
 
     </div>
   );

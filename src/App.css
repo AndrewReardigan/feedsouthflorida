@@ -97,3 +97,20 @@
   background-image: url("./images/eceec593784ea332066b39cbb2652fbe.png")
 }
 
+
+
+/* Donation stying */
+#PerishableStatus {
+  border-radius: 25px;
+  padding: 7px;
+}
+
+#perishable {
+  background-color: #F09826;
+}
+
+#non-perishable {
+  background-color: #FFFFFF;
+}
+
+

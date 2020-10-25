@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-const initialState = [];
+const initialState = { username: 'Seth' };
 const userStore = createContext(initialState);
 const { Provider } = userStore;
 

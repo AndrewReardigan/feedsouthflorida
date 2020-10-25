@@ -7,7 +7,7 @@ import HostEvent from '../components/HostEvent';
 import EventDetails from '../components/EventDetails';
 import MakeDonation from '../components/MakeDonation';
 import Profile from '../components/Profile';
-
+import BarcodeScanner from '../components/BarcodeScanner';
 const Paths = () => {
 	const globalState = useContext(userStore);
 	const { dispatch } = globalState;
@@ -17,6 +17,7 @@ const Paths = () => {
 			{/* {!globalState.state.loggedIn ? <Redirect to="/" /> : <Redirect to="/home" />} */}
 			<Switch>
 				<Route path="/" exact component={Login} />
+				<Route path="/scan-barcodes" exact component={BarcodeScanner} />
 				<Route path="/home" component={Home} />
 				<Route path="/host-event" component={HostEvent} />
 				<Route path="/profile" component={Profile} />

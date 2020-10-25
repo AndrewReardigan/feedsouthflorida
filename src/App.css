@@ -188,3 +188,40 @@ button {
 	border-radius: 25px;
 	background-color: orange;
 }
+
+.scan-header {
+	width: 100%;
+	height: 150px;
+	background-color: orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.2rem;
+	font-weight: bold;
+	color: white;
+}
+.scanner {
+	padding: 0;
+	margin: 0;
+}
+.bottomComponent {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+}
+.input {
+	width: 80%;
+	padding: 10px;
+	margin: 10px;
+}
+.increment {
+	display: flex;
+	padding: 0px 10px;
+	justify-content: center;
+}
+.special-button {
+	padding: 1rem 4rem;
+	border-radius: 25px;
+	background-color: orange;
+	font-size: medium;
+}

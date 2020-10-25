@@ -47,21 +47,33 @@ class DonateForm extends Component {
 
     handleList = e => {
         const newItem = {
-
+            item: this.state.item,
+            weight: this.state.weight,
+            quantity: this.state.quantity,
+            perishable: this.state.perishable,
+            non_perishable: this.state.non_perishable,
+            date: this.state.date,
+            description: this.state.description,
         }
-        this.setState({ quantity: quantity++ })
+       
         this.state.list.push(newItem)
     }
 
     handleSubmit = e => {
         e.preventDefault();
 
-        const data = {
-
-        }
+        const data = this.state.list
    
+        // reset forms
         this.setState({
-        
+            item: "",
+            weight: 0,
+            quantity: 1,
+            perishable: true,
+            non_perishable: false,
+            date: null,
+            description: "",
+            list: [],
             
         })
     };

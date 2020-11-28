@@ -1,3 +1,17 @@
+# Feeding South Florida 
+## This app allows anybody to immediately become a Food Donation Organizer.
+
+
+** Sign up. Use your phone/laptop to scan the barcode of food being donated. It keeps track of the weight. 
+** And when your group inventories 500lbs of food or greater, you can automatically schedule a pick up.
+
+** Drections:
+1. Clone and run yarn.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
